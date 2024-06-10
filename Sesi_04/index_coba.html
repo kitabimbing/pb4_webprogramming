@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Luas dan Keliling Lingkaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hitung Luas dan Keliling Lingkaran</h1>
+    <label for="radius">Masukkan jari-jari lingkaran:</label>
+    <input type="number" id="radius" placeholder="Jari-jari">
+    <button onclick="hitungLingkaran()">Hitung</button>
+
+    <p id="luas"></p>
+    <p id="keliling"></p>
+    <p id="error" style="color: red;"></p>
+
+    <script>
+        function hitungLingkaran() {
+            // Mengambil nilai jari-jari dari input
+            let radius = document.getElementById('radius').value;
+            radius = parseFloat(radius);
+            
+            // Mengambil elemen untuk menampilkan hasil
+            let luasElement = document.getElementById('luas');
+            let kelilingElement = document.getElementById('keliling');
+            let errorElement = document.getElementById('error');
+
+            // Menghapus pesan sebelumnya
+            luasElement.innerHTML = '';
+            kelilingElement.innerHTML = '';
+            errorElement.innerHTML = '';
+
+            // Memeriksa apakah jari-jari lebih besar dari nol
+            if (radius > 0) {
+                // Menghitung luas lingkaran
+                let luas = Math.PI * radius * radius;
+                // Menghitung keliling lingkaran
+                let keliling = 2 * Math.PI * radius;
+
+                // Menampilkan hasil
+                luasElement.innerHTML = 'Luas lingkaran: ' + luas.toFixed(2);
+                kelilingElement.innerHTML = 'Keliling lingkaran: ' + keliling.toFixed(2);
+            } else {
+                errorElement.innerHTML = 'Jari-jari harus lebih besar dari nol!';
+            }
+        }
+    </script>
+</body>
+</html>

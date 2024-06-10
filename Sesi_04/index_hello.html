@@ -1,0 +1,145 @@
+
+pembelajaran sesi 04
+-------------------------------------------------
+code pertama logic:
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello Script Algoritma</title>
+  </head>
+  <body>
+    <h1>Hello Script Algoritma</h1>
+    <script>
+      // scope nilai
+      /*
+         80 - 100
+         70 - 79
+         65 - 69
+         55 - 64
+         0 - 54 
+         1 - 100 
+         >= 101 > tidak dikenal (over)
+         <= -1 > tidak dikenal (min)
+        */
+      // algoritma kelulusan mahasiswa
+
+      var nilai = 61;
+      /*
+        numeric = angka
+        string = 12343!@#asdf,./ > ""
+        char = 1 karakter > 'C'
+        array = []
+        object = {}
+        dll
+      */
+      if (nilai >= 80 && nilai <= 100) console.log("huruf mutu a");
+      else if (nilai >= 70 && nilai <= 79) console.log("huruf mutu b");
+      else if (nilai >= 65 && nilai <= 69) console.log("huruf mutu c");
+      else if (nilai >= 55 && nilai <= 64) console.log("huruf mutu c-");
+      else console.log("tidak sesuai");
+
+      switch (nilai) {
+        case 60:
+          console.log("lulus");
+          break;
+
+        default:
+          console.log("tidak ada");
+          break;
+      }
+
+      var a = 5;
+      var b = 3;
+      var hasil = a + b;
+      console.log(hasil);
+
+      //   pembuatan logic hungry > eat
+      //   ternary if
+      var status = "hungry";
+      status != "hungry" ? (status = "i`am happy") : (status = "makan");
+      console.log(status);
+
+      //   if state
+      if (status == "hungry") console.log("makan");
+      else console.log("i`am happy");
+
+      //   if state
+      if (status == "i`am happy") {
+        console.log("makan");
+        console.log("segera diberi makan");
+      } else {
+        console.log("i`am happy");
+      }
+      
+       //   kondisi menggunakan if
+      /*
+          var >
+              contoh let nilai = 0; type data number
+              contoh let nilai; (tanpa assign value) type data undefined
+          const > tetap
+          let > scope
+        */
+      let qwert = ["123", 123, "hello", "a", true];
+      console.log(typeof qwert);
+      let obj = {
+        nama: "arif",
+      };
+      console.log(obj);
+
+      let score = 60;
+      console.log(score);
+      score = 70; //untuk const tidak bisa di assign
+      console.log(score);
+
+      for (var i = 0; i <= 10; i++) {
+        console.log(i);
+      }
+      console.log("hasil sih i: " + i);
+
+      //   loop mod
+      for (var i = 0; i <= 10; i++) {
+        if (i % 2 == 0) {
+          console.log("even");
+        } else {
+          console.log("odd");
+        }
+      }
+
+      //   loop while
+      var i = 0;
+      while (i <= 10) {
+        console.log(i);
+        i++;
+      }
+
+      //   loop do while
+      var i = 0;
+      do {
+        console.log(i);
+        i++;
+      } while (i <= 10);
+
+      // function do while
+      function loopWhile() {
+        var i = 0;
+        while (i <= 10) {
+          console.log(i);
+          i++;
+        }
+      }
+
+      setTimeout(loopWhile, 3000);
+
+      let nomor = 1;
+
+      while (nomor <= 10) {
+        console.log(nomor + (nomor % 2 === 0 ? " is even" : " is odd"));
+        nomor++;
+      }
+    </script>
+  </body>
+</html>
+=
